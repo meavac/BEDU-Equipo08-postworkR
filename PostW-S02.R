@@ -10,7 +10,6 @@ liga2017<-read.csv("LigaPrimeraDiv-2017-18.csv")
 # 1) Revisa la estructura delos data frames 
 # usando las funciones: str, head, View y summary
 
-
 # Cambiar el tipo de dato de DATE, TIME (no necesario)
 str(liga2019)
 head(liga2019)
@@ -35,6 +34,9 @@ liga2019<-liga2019[,-3] # Eliminar columna TIME
 teams2019<- select (liga2019,Date:FTR)
 teams2018<- select (liga2018,Date:FTR)
 teams2017<- select (liga2017,Date:FTR)
+
+teams2017$Date <-sub("/17","/2017",teams2017$Date) # Corregir formato año
+teams2017$Date <-sub("/18","/2018",teams2017$Date)
 
 # 3) Asegúrate de que los elementos 
     #de las columnas correspondientes de los nuevos data frames 
