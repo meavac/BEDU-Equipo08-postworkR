@@ -1,8 +1,6 @@
 library(dplyr) # Cargar paquete
 
 #Establecer directorio de trabajo
-setwd("C:/Users/avila/Documents/Files-R/PWS02")
-dir()
 
 #Cargar archivo en vector
 liga2019<-read.csv("LigaPrimeraDiv-2019-20.csv")
