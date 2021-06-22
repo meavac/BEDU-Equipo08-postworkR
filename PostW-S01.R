@@ -7,7 +7,7 @@ dir()
 #Cargar archivo en vector
 liga<-read.csv("LigaPrimeraDiv-2019-20.csv")
 str(liga)
-pw 
+
 
 #Seleccionar columnas de interés
 goles<-select(liga, FTHG:FTAG)
@@ -22,7 +22,6 @@ f.abs <- table(goles)
 
 # 3) Agregar columna de totales marginales sobre frecuencia relativa
 (tmarg.rel<- addmargins(f.rel))
-?addmargins
 
 # Estimar las siguientes probabilidades:
 #3) Probabilidad Marginal
