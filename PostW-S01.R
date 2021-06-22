@@ -27,8 +27,8 @@ f.abs <- table(goles)
 # Estimar las siguientes probabilidades:
 #3) Probabilidad Marginal
 
-x<-c(1:6) # Establecer rango de valores para x
-y<-c(1:5) # Establecer rango de valores para y
+x<-c(0:6) # Establecer rango de valores para x
+y<-c(0:5) # Establecer rango de valores para y
 
 (x.goal<-sample(x, 1, F)) # Generar un valor dentro del rango
 (y.goal<-sample(y, 1, F))
@@ -54,5 +54,5 @@ paste("La probabilidad marginal que un equipo visitante anote",
 tmarg.rel[x.goal,y.goal] #Recuperar la coordenada producida
 
 paste("La probabilidad conjunta que un equipo en casa anote", 
-      x.goal, "goles y el visitante meta", y.goal, 
+      x.goal, "goles y el visitante", y.goal, 
       "es", round(tmarg.rel[x.goal,y.goal]*100,2), "%")
