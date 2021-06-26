@@ -86,7 +86,7 @@ fc <- function(d, i){
   return(frame[i, ])
 }
 
-bootobj <- boot(quot.table, fc, R=10)
+bootobj <- boot(quot.table, fc, R=1000)
 bootobj
 head(bootobj$t)
 
