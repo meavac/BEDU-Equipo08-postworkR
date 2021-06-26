@@ -54,11 +54,11 @@ vec2 <- c(0:6)
 x <- sample(vec1,1,F)
 y <- sample(vec2,1,F)
 paste("La probabilidad de que el equipo que juega en casa anote", x, "gol(es) es de",
-      round(data.goals.table[x+1,8]*100,4),"%")
+      round(games.cprob.table[x+1,8]*100,4),"%")
 paste("La probabilidad de que el equipo que juega como visitante anote", y, "gol(es) es de",
-      round(data.goals.table[10,y+1]*100,4),"%")
+      round(games.cprob.table[10,y+1]*100,4),"%")
 paste("La probabilidad de que el equipo que juega en casa anote", x, "gol(es) y el equipo que juega como visitante anote" , y, "gol(es) es de",
-      round(data.goals.table[x+1,y+1]*100,4),"%")
+      round(games.cprob.table[x+1,y+1]*100,4),"%")
 
 # Convertimos las tablas de probabilidades a data frames, ya que ggplot para hacer tablas solo recibe data frames
 FTAG.mprob.df <- as.data.frame(FTAG.mprob)
@@ -71,9 +71,9 @@ data.games.heatmap <- ggplot(games.cprob.df, aes(x=FTHG, y=FTAG, fill=Freq)) +
   xlab("Goles en casa") +
   ylab("Goles de visitante") +
   labs(fill= "Probabilidad", 
-  title = paste("Heatmap de la probabilidad conjunta de las anotaciones"))+
-  theme(plot.title = element_text(size=12))+
-  scale_fill_continuous(name = "Prob. Conjunta")+
+       title = paste("Heatmap de la probabilidad conjunta de las anotaciones")) +
+  theme(plot.title = element_text(size=12)) +
+  scale_fill_continuous(name = "Prob. Conjunta") +
   scale_fill_gradient(low = "#f13c77", high = "#f5e6ad") +
   theme(plot.margin=margin(20,20,20,15),
         title =element_text(face='bold', color = "#71092A"))
@@ -83,7 +83,7 @@ data.FTHG.bar <- ggplot(FTHG.mprob.df, aes(x=games.FTHG, y=Freq)) +
   theme_dark()+
   xlab("Goles anotados") +
   ylab("Porcentaje")+
-  labs(title = paste("Probabilidad marginal. Anotaciones del equipo en casa"))+
+  labs(title = paste("Probabilidad marginal. Anotaciones del equipo en casa")) +
   theme(plot.margin=margin(25,20,30,25),
         title =element_text(size=9, face='bold', color = "#273043"))
 
@@ -91,7 +91,7 @@ data.FTAG.bar <- ggplot(FTAG.mprob.df, aes(x=games.FTAG, y=Freq)) +
   geom_bar(stat="identity", color="#99E1D9", fill="#32292F") +
   xlab("Goles anotados") +
   ylab("Porcentaje")+
-  labs(title = paste("Probabilidad marginal. Anotaciones del equipo visitante"))+
+  labs(title = paste("Probabilidad marginal. Anotaciones del equipo visitante")) +
   theme(plot.margin=margin(25,25,20,20),
         title =element_text(size=9, face='bold', color = "#32292F"))
 
