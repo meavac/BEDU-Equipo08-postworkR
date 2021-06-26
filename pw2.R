@@ -1,6 +1,6 @@
-#Postwork 2
+# Postwork 2
 
-#Instrucciones:
+# Instrucciones:
 
 # 1.- Importa los datos de soccer de las temporadas 2017/2018, 2018/2019 y 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php
 # 2.- Revisa la estructura de de los data frames al usar las funciones: str, head, View y summary
@@ -9,7 +9,7 @@
 
 # Notas para los datos de soccer: https://www.football-data.co.uk/notes.txt
 
-#SOLUCIÓN:
+# SOLUCIÓN:
 
 # Cargamos dplyr y leemos los datos csv
 library(dplyr)
