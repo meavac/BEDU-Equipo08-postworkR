@@ -10,9 +10,9 @@
 
 # Posteriormente elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
 
-  # La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x = 0, 1, 2, ...)
-  # La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y = 0, 1, 2, ...)
-  # La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
+# La probabilidad (marginal) de que el equipo que juega en casa anote x goles (x = 0, 1, 2, ...)
+# La probabilidad (marginal) de que el equipo que juega como visitante anote y goles (y = 0, 1, 2, ...)
+# La probabilidad (conjunta) de que el equipo que juega en casa anote x goles y el equipo que juega como visitante anote y goles (x = 0, 1, 2, ..., y = 0, 1, 2, ...)
 
 # Notas para los datos de soccer: https://www.football-data.co.uk/notes.txt
 
@@ -30,8 +30,6 @@ data.FTHG.table <- table(select(data, FTHG), dnn = "Prob. marginal equipo casa a
 data.FTAG.table <- table(select(data, FTAG), dnn = "Prob. marginal equipo afuera anote x goles")
 
 data.goals.table <- table(select(data, FTHG, FTAG), dnn = c("Goles de casa", "Goles de afuera"))
-
-# Agregamos nombres a las dimensiones
 
 # Dividimos los resultados de las tablas entre la cantiad de renglones, para obtener la probabilidad marginal y compuesta de cada valor
 n <- nrow(data) # Obtenemos la cantidad de renglones (en este caso 1 renglon = 1 juego)
