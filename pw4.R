@@ -81,7 +81,6 @@ quot.table
 #########################################################################################################################################################
 
 # Hacemos bootstrap a los valores de la tabla
-
 fc <- function(d, i){
   frame <- select(as.data.frame(d), Freq)
   return(frame[i, ])
