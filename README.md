@@ -17,4 +17,4 @@ Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los �
 5. Limón Ledesma Carlos.
 6. Lira Armando.
   
-Gracias por visitarnos y que tengan un excelente día : )
+Gracias por visitarnos y que tengas un excelente día : )
