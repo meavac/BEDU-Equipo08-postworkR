@@ -53,12 +53,12 @@ vec1 <- c(0:8)
 vec2 <- c(0:6)
 x <- sample(vec1,1,F)
 y <- sample(vec2,1,F)
-paste("La probabilidad de que el equipo que juega en casa anote", x, "goles es de",
-      round(games.cprob.table[x+1,8]*100,4),"%")
-paste("La probabilidad de que el equipo que juega como visitante anote", y, "goles es de",
-      round(games.cprob.table[10,y+1]*100,4),"%")
-paste("La probabilidad de que el equipo que juega en casa anote", x, "goles y el equipo que juega como visitante anote" , y, "goles es de",
-      round(games.cprob.table[x+1,y+1]*100,4),"%")
+paste("La probabilidad de que el equipo que juega en casa anote", x, "gol(es) es de",
+      round(data.goals.table[x+1,8]*100,4),"%")
+paste("La probabilidad de que el equipo que juega como visitante anote", y, "gol(es) es de",
+      round(data.goals.table[10,y+1]*100,4),"%")
+paste("La probabilidad de que el equipo que juega en casa anote", x, "gol(es) y el equipo que juega como visitante anote" , y, "gol(es) es de",
+      round(data.goals.table[x+1,y+1]*100,4),"%")
 
 # Convertimos las tablas de probabilidades a data frames, ya que ggplot para hacer tablas solo recibe data frames
 FTAG.mprob.df <- as.data.frame(FTAG.mprob)
