@@ -2,7 +2,7 @@
 
 ¡NOTA IMPORTANTE! : )
 
-El equipo consideró apropiado incluir cada uno de los códigos desarrollados, de manera independiente. No obstante, nótese que el tercer 'postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
+El equipo consideró apropiado incluir de manera independiente cada uno de los códigos desarrollados. No obstante, nótese que el tercer 'Postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
 
 Entonces, si así lo deseara el evaluador, bastaría con que se ejecutran los últimos dos archivos (códigos).
 
