@@ -61,27 +61,27 @@ data.games.heatmap <- ggplot(games.cprob.df, aes(x=goles_casa, y=goles_afuera, f
   xlab("Goles en casa") +
   ylab("Goles de visitante") +
   labs(fill= "Probabilidad", 
-       title = paste("Heatmap de la probabilidad conjunta de las anotaciones"))+
-  theme(plot.title = element_text(size=12))+
-  scale_fill_continuous(name = "Prob. Conjunta")+
+       title = paste("Heatmap de la probabilidad conjunta de las anotaciones")) +
+  theme(plot.title = element_text(size=12)) +
+  scale_fill_continuous(name = "Prob. Conjunta") +
   scale_fill_gradient(low = "#f13c77", high = "#f5e6ad") +
   theme(plot.margin=margin(20,20,20,15),
         title =element_text(face='bold', color = "#71092A"))
 
 data.FTHG.bar <- ggplot(FTHG.mprob.df, aes(x=goles_casa, y=prob_marginal)) + 
   geom_bar(stat="identity", color="#F02D3A", fill="#273043") +
-  theme_dark()+
+  theme_dark() +
   xlab("Goles anotados") +
-  ylab("Probabilidad marginal")+
-  labs(title = paste("Probabilidad marginal. Anotaciones del equipo en casa"))+
+  ylab("Probabilidad marginal") +
+  labs(title = paste("Probabilidad marginal. Anotaciones del equipo en casa")) +
   theme(plot.margin=margin(25,20,30,25),
         title =element_text(size=9, face='bold', color = "#273043"))
 
 data.FTAG.bar <- ggplot(FTAG.mprob.df, aes(x=goles_afuera, y=prob_marginal)) + 
   geom_bar(stat="identity", color="#99E1D9", fill="#32292F") +
   xlab("Goles anotados") +
-  ylab("Probabilidad marginal")+
-  labs(title = paste("Probabilidad marginal. Anotaciones del equipo visitante"))+
+  ylab("Probabilidad marginal") +
+  labs(title = paste("Probabilidad marginal. Anotaciones del equipo visitante")) +
   theme(plot.margin=margin(25,25,20,20),
         title =element_text(size=9, face='bold', color = "#32292F"))
 
