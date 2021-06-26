@@ -2,9 +2,11 @@
 
 # Instrucciones:
  
-# 1. Importa los datos de soccer de la temporada 2019/2020 de la primera división de la liga española a R, los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php
-# 2. Del data frame que resulta de importar los datos a R, extrae las columnas que contienen los números de goles anotados por los equipos que jugaron en casa (FTHG) y los goles anotados por los equipos que jugaron como visitante (FTAG)
-# 3. Consulta cómo funciona la función table en R al ejecutar en la consola ?table
+# 1. Importa los datos de soccer de la temporada 2019/2020 de la primera división de la liga española a R, 
+# los datos los puedes encontrar en el siguiente enlace: https://www.football-data.co.uk/spainm.php.
+# 2. Del data frame que resulta de importar los datos a R, extrae las columnas que contienen los números 
+# de goles anotados por los equipos que jugaron en casa (FTHG) y los goles anotados por los equipos que jugaron como visitante (FTAG).
+# 3. Consulta cómo funciona la función table en R al ejecutar en la consola ?table.
 
 # Posteriormente elabora tablas de frecuencias relativas para estimar las siguientes probabilidades:
 
@@ -38,15 +40,4 @@ n <- nrow(data) # Obtenemos la cantidad de renglones (en este caso 1 renglon = 1
 
 (data.FTAG.table / n) # Prob marginal x goles de afuera en decimal
 
-data.prop.table <- (data.goals.table / n) # Prob compuesta que los dos equipos anoten x goles en decimal
-
-data.prop.table <- addmargins(data.prop.table)# Prob marginal de ambos equipos
-
-#Creamos dos vectores que arrojen datos aleatoreos y que representan la cantidad de goles
-vec1 <- c(0:6)
-vec2 <- c(0:5)
-x <- sample(vec1,1,F)
-y <- sample(vec2,1,F)
-
-#Obtenemos la probabilidad conjunta:
-paste ("La probabilidad conjunta de que el quipo en casa anote", x, "goles, y el equipo visitante anote", y, "goles es de: ",round(data.prop.table[x+1,y+1]*100,4),"%")
+(data.goals.table / n) # Prob compuesta que los dos equipos anoten x goles en decimal
