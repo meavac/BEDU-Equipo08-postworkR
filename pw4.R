@@ -1,4 +1,4 @@
-#Postwork 4
+# Postwork 4
 
 # Instrucciones:
 
@@ -12,7 +12,7 @@
 
 # Notas para los datos de soccer: https://www.football-data.co.uk/notes.txt
 
-#SOLUCIÓN:
+# SOLUCIÓN:
 
 # Cargamos dplyr y leemos los datos csv
 packs <- c("dplyr", "boot")
@@ -69,21 +69,18 @@ for (y in 1:games.rows) {
 
 quot.table
 
-#######  Significado de los Coeficientes  ###############################################################################################################
+#######  Significado de los cocientes  ##################################################################################################################
 ##                                                                                                                                                     ## 
-## Los coeficientes serán tomarán valor de 1 cuando la probabilidad conjunta sea igual al producto de las probabilidades marginales correspondientes.  ##
-## Esto coincide con la definición de independencia de variables aleatorias, la cual indica que la probabilidad conjunta es igual al producto de las   ##
-## marginales siempre que y únicamente cuando las variables aleatorias son independientes.                                                             ##
-## Cuando se obtiene un 1 en la tabla se tiene un par de eventos independientes.                                                                       ##
+## Los cocientes tomarán valor de 1 cuando la probabilidad conjunta sea igual al producto de las probabilidades marginales correspondientes.           ##
+## Esto coincide con la definición de independencia de variables aleatorias, la cual indica que la probabilidad conjunta es igual al producto          ##
+## de las marginales, siempre que y únicamente cuando las variables aleatorias son independientes.                                                     ##
+## Cuando se obtiene un 1 en la tabla, se tiene un par de eventos independientes.                                                                      ##
 ## Y si las variables aleatorias fueran independientes todos los valores deberían dar resultado de 1                                                   ##
 ## (salvo la posible división entre cero de eventos no probables, pero estos se excluyen de la tabla).                                                 ##
 ## Así que sería razonable esperar una tabla de 1 si los goles de visitantes no se relacionaran con los goles de casa.                                 ##
-## En general, podemos interpretar los coeficientes lejanos de 1 como eventos fuertemente relacionados.                                                ##
+## En general, podemos interpretar los cocientes lejanos de 1 como eventos fuertemente relacionados.                                                   ##
 ##                                                                                                                                                     ## 
 #########################################################################################################################################################
-
-
-
 
 # Hacemos bootstrap a los valores de la tabla
 
@@ -96,6 +93,4 @@ bootobj <- boot(quot.table, fc, R=10)
 bootobj
 head(bootobj$t)
 
-# Con este remuestreo podemos aplicar pruebas de hipotesis que determinen la distribución de los coeficientes
-
-
+# Con este remuestreo podemos aplicar pruebas de hipótesis que determinen la distribución de los coeficientes.
