@@ -1,15 +1,20 @@
-# BEDU-Equipo08-postworkR
+# BEDU - EQUIPO 08 - POSTWORK DE R: SESIONES 1 A 4
 
-Bienvenido a nuestro repositorio de postwork para el módulo de programación con R de Bedu.
+Bienvenido a nuestro repositorio, el cual corresponde al módulo de programación con R, de Bedu.
 
-Las versiones que escogimos y consideramos mejores son las que están dentro del branch main.
+¡NOTA IMPORTANTE! : )
 
-Nuestro equipo está conformado por:
-  • Carlos Jiménez Zepeda	
-  • Armando Lira Verdugo
-  • Melina Rocío Ávila Cruz
-  • Juan Carlos De la Cruz Vázquez	
-  • Luis Alejandro Gómora Figueroa
-  • Carlos Limón Ledesma
+El equipo consideró apropiado incluir de manera independiente cada uno de los códigos desarrollados. No obstante, nótese que el tercer 'Postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
+
+Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los últimos dos archivos (códigos).
+
+# Integrantes del equipo:
+
+1. Ávila Cruz Melina Rocío.
+2. De la Cruz Vázquez Juan Carlos.
+3. Gómora Figueroa Luis Alejandro.
+4. Jiménez Zepeda Carlos.
+5. Limón Ledesma Carlos.
+6. Lira Armando.
   
-Gracias por visitarnos y que tenga un buen día :)
+Gracias por visitarnos y que tengan un excelente día : )
