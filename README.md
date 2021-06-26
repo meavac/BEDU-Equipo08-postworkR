@@ -2,7 +2,7 @@
 
 Bienvenido a nuestro repositorio, el cual corresponde al módulo de programación con R, de Bedu.
 
-¡NOTA IMPORTANTE! : )
+¡NOTA IMPORTANTE!
 
 El equipo consideró apropiado incluir de manera independiente cada uno de los códigos desarrollados. No obstante, nótese que el tercer 'Postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
 
@@ -17,4 +17,4 @@ Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los �
 5. Limón Ledesma Carlos.
 6. Lira Armando.
   
-Gracias por visitarnos y que tengas un excelente día : )
+Gracias por visitarnos. ¡Ten un excelente día! : )
