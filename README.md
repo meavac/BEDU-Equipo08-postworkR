@@ -6,7 +6,7 @@ Bienvenido a nuestro repositorio, el cual corresponde al módulo de programació
 
 El equipo consideró apropiado incluir de manera independiente cada uno de los códigos desarrollados. No obstante, nótese que el tercer 'Postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
 
-Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los últimos dos archivos (códigos).
+Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los últimos dos archivos (códigos). Sin embargo, el equipo recomiendo que se navegue y ejecute cada uno de ellos.
 
 # Integrantes del equipo:
 
