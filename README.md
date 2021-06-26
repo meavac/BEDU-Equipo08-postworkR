@@ -1,12 +1,12 @@
-# BEDU-Equipo08-postworkR
+# BEDU - EQUIPO08 - POSTWORK DE R: SESIONES 1 A 4
 
-¡NOTA IMPORTANTE! :)
+¡NOTA IMPORTANTE! : )
 
 El equipo consideró apropiado incluir cada uno de los códigos desarrollados, de manera independiente. No obstante, nótese que el tercer 'postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
 
-# Entonces, si así lo deseara el evaluador, bastaría con que se ejecutran los últimos dos archivos (códigos).
+Entonces, si así lo deseara el evaluador, bastaría con que se ejecutran los últimos dos archivos (códigos).
 
-Integrantes del equipo:
+# Integrantes del equipo:
 
 1. Ávila Cruz Melina Rocío.
 2. De la Cruz Vázquez Juan Carlos.
