@@ -41,3 +41,17 @@ n <- nrow(data) # Obtenemos la cantidad de renglones (en este caso 1 renglon = 1
 (data.FTAG.table / n) # Prob marginal x goles de afuera en decimal
 
 (data.goals.table / n) # Prob compuesta que los dos equipos anoten x goles en decimal
+
+# Creamos vectores aleatorios que representan la cantidad de goles para el equipo de casa y los visitantes
+data.goals.table <- addmargins(data.goals.table)
+data.goals.table
+vec1 <- c(0:6)
+vec2 <- c(0:5)
+x <- sample(vec1,1,F)
+y <- sample(vec2,1,F)
+paste("La probabilidad de que el equipo que juega en casa anote", x, "goles es de",
+      round(data.goals.table[x+1,8]*100,4),"%")
+paste("La probabilidad de que el equipo que juega como visitante anote", y, "goles es de",
+      round(data.goals.table[10,y+1]*100,4),"%")
+paste("La probabilidad de que el equipo que juega en casa anote", x, "goles y el equipo que juega como visitante anote" , y, "goles es de",
+      round(data.goals.table[x+1,y+1]*100,4),"%")
