@@ -34,7 +34,7 @@ n <- nrow(data) # Obtenemos la cantidad de renglones (en este caso 1 renglón = 
 
 (data.FTHG.table / n) # Prob marginal: x goles de casa en decimal
 (data.FTAG.table / n) # Prob marginal: y goles de afuera en decimal
-data.goals.table <- (data.goals.table / n) # Prob compuesta que los dos equipos anoten z goles en decimal
+data.goals.table <- (data.goals.table / n) # Prob compuesta de que los dos equipos anoten z goles en decimal
 
 # Creamos vectores aleatorios que representan la cantidad de goles para el equipo de casa y los visitantes
 data.goals.table <- addmargins(data.goals.table)
