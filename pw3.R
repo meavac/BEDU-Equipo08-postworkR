@@ -46,6 +46,21 @@ FTHG.mprob <- round(table(games.FTHG) / n, 4)
 FTAG.mprob <- round(table(games.FTAG) / n, 4)
 games.cprob <- round(table(games.goals) / n, 4)
 
+# Ejemplos de probabilidad marginal y conjunta
+# Creamos vectores aleatorios que representan la cantidad de goles para el equipo de casa y los visitantes
+games.cprob.table <- addmargins(games.cprob)
+games.cprob.table
+vec1 <- c(0:8)
+vec2 <- c(0:6)
+x <- sample(vec1,1,F)
+y <- sample(vec2,1,F)
+paste("La probabilidad de que el equipo que juega en casa anote", x, "goles es de",
+      round(games.cprob.table[x+1,8]*100,4),"%")
+paste("La probabilidad de que el equipo que juega como visitante anote", y, "goles es de",
+      round(games.cprob.table[10,y+1]*100,4),"%")
+paste("La probabilidad de que el equipo que juega en casa anote", x, "goles y el equipo que juega como visitante anote" , y, "goles es de",
+      round(games.cprob.table[x+1,y+1]*100,4),"%")
+
 # Convertimos las tablas de probabilidades a data frames, ya que ggplot para hacer tablas solo recibe data frames
 FTAG.mprob.df <- as.data.frame(FTAG.mprob)
 FTHG.mprob.df <- as.data.frame(FTHG.mprob)
