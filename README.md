@@ -1,7 +1,7 @@
 # BEDU: DATA SCIENCE - FASE 2 (MÓDULO 1): PROGRAMACIÓN Y ESTADÍSTICA CON R
 ¡Disfruta la navegabilidad del sitio y ten un excelente día! ¡Gracias por visitarnos! 😃
 
-## 🙋 Presentación - Equipo 8
+## 🙋 Presentación: Equipo 8
 1. Melina Ávila.
 2. Juan Carlos De la Cruz.
 3. Alejandro Gómora.
@@ -10,9 +10,9 @@
 6. Armando Lira.
 
 ## 👋 Bienvenid@
-En este espacio encontrarás el desarrollo de nuestro primer proyecto integrador, el cual se elaboró totalmente en R y cuyo contenido está dividido en ocho secciones llamadas _postworks_. ¡Sientete con la libertad de navegar por el repositorio y descubrir cada una de las soluciones a las que este equipo llegó! 😉
+En este espacio encontrarás el desarrollo de nuestro primer proyecto integrador, el cual se elaboró totalmente en R y cuyo contenido se segmentó en ocho secciones llamadas _postworks_. ¡Sientete con la libertad de navegar por el repositorio y descubrir cada una de las soluciones a las que este equipo llegó! 😉
 
-Te darás cuenta de cuánto aprendimos sobre el lenguaje de programación R y qué tanto pudimos explotarlo como herramienta útil para generar informes estadísticos, elaborar análisis complejos, manipular conjuntos de datos e interpretar resultados.
+Te darás cuenta de cuánto aprendimos sobre este lenguaje de programación y qué tanto pudimos explotarlo como herramienta para generar informes estadísticos, elaborar análisis complejos, manipular conjuntos de datos e interpretar resultados.
 
 ## 📋 Contenido
 - _```POSTWORK 1:```_ [Sesión 1. Introducción a R y Software.]
