@@ -16,8 +16,8 @@ Te darás cuenta de cuánto aprendimos sobre R como lenguaje de programación y 
 ## 📋 Contenido
 - ```_POSTWORK 1_```: [Sesión 1. Introducción a R y Software.]
 - ```_POSTWORK 2_:``` [Sesión 2. Programación y manipulación de datos en R.]
-- _POSTWORK 3_: [Sesión 3. Análisis Exploratorio de Datos (AED o EDA) con R.]
-- _POSTWORK 4_: [Sesión 4. Algunas distribuciones, teorema central del límite y contraste de hipótesis.]
+- _```POSTWORK 3```_: [Sesión 3. Análisis Exploratorio de Datos (AED o EDA) con R.]
+- _```POSTWORK 4:```_ [Sesión 4. Algunas distribuciones, teorema central del límite y contraste de hipótesis.]
 - _POSTWORK 5_: [Sesión 5. Regresión lineal y clasificación.]
 - _POSTWORK 6_: [Sesión 6. Series de tiempo.]
 - _POSTWORK 7_: [Sesión 7. RStudio Cloud & Github, conexiones con BDs y lectura de datos externos.]
