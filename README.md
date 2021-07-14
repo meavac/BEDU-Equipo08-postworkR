@@ -1,20 +1,26 @@
-# BEDU - EQUIPO 08 - POSTWORK DE R: SESIONES 1 A 4
+# BEDU: DATA SCIENCE - FASE 2: PROGRAMACIÓN Y ESTADÍSTICA CON R
+Gracias por visitarnos.
+¡Disfruta la navegabilidad del sitio y ten un excelente día! :bowtie:
 
-Bienvenido a nuestro repositorio, el cual corresponde al módulo de programación con R, de Bedu.
+## EQUIPO 8:
+1. Melina Ávila.
+2. Juan Carlos De la Cruz.
+3. Alejandro Gómora.
+4. Carlos Jiménez.
+5. Carlos Limón.
+6. Armando Lira.
 
-¡NOTA IMPORTANTE!
+#### 👋 Bienvenid@
+En este espacio encontrarás el desarrollo de nuestro proyecto integrador, el cual está dividido en ocho secciones llamadas _postworks_. ¡Sientete con la libertad de navegar por el repositorio y de descubrir cada una de las soluciones a las que se llegó!
+Te darás cuenta de cuánto aprendimos sobre R como lenguaje de programación y como herramienta útil para generar informes estadísticos, elaborar análisis complejos, manipular conjuntos de datos e interpretar resultados.
 
-El equipo consideró apropiado incluir de manera independiente cada uno de los códigos desarrollados. No obstante, nótese que el tercer 'Postwork' une el desarrollo de los dos primeros, con la diferencia de que éste se pensó para tratar los tres archivos CSV propuestos.
-
-Entonces, si así lo deseara el evaluador, bastaría con que se ejecutaran los últimos dos archivos (códigos). Sin embargo, el equipo recomiendo que se navegue y ejecute cada uno de ellos.
-
-# Integrantes del equipo:
-
-1. Ávila Cruz Melina Rocío.
-2. De la Cruz Vázquez Juan Carlos.
-3. Gómora Figueroa Luis Alejandro.
-4. Jiménez Zepeda Carlos.
-5. Limón Ledesma Carlos.
-6. Lira Armando.
-  
-Gracias por visitarnos. ¡Ten un excelente día! : )
+#### 📋 Contenido
+- _POSTWORK 1_: Sesión 1. Introducción a R y Software. [Contribution guidelines for this project](pw1.R)
+- _POSTWORK 2_: Sesión 2. Programación y manipulación de datos en R.
+- _POSTWORK 3_: Sesión 3. Análisis Exploratorio de Datos (AED o EDA) con R.
+- _POSTWORK 4_: Sesión 4. Algunas distribuciones, teorema central del límite y contraste de hipótesis.
+- _POSTWORK 5_: Sesión 5. Regresión lineal y clasificación.
+- _POSTWORK 6_: Sesión 6. Series de tiempo.
+- _POSTWORK 7_: Sesión 7. RStudio Cloud & Github, conexiones con BDs y lectura de datos externos.
+- _POSTWORK 8_: Sesión 8. Dashboards con Shiny - Entorno GUI.
+- _CONTRASTE DE HIPÓTESIS_: Prueba de hipótesis propuesta.
