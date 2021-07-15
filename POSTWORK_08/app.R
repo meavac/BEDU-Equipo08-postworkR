@@ -2,6 +2,7 @@
 
 # Postwork 8. Sesión del 08/07/2021.
 
+
 # Instrucciones (obtenidas directamente del repositorio de BEDU en la sesión correspondiente):
 
 # 1. Para este "postwork" genera un dashboard en un solo archivo 'app.R'; para ello realiza lo siguiente.
