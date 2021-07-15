@@ -20,7 +20,7 @@
 
 # SOLUCIÓN:
 
-# Si es necesario, deberán instalarse las siguientes librerías:
+# Si es necesario, se deberán instalar las siguientes librerías:
 # "shiny", "shinydashboard", "shinythemes", "ggplot2", "plotly", "dplyr", "tidyr", "ggfortify", "autoplotly",
 # "zoo", "ggthemes", "fbRanks", "DT", "dashboardthemes", "fbranks", "devtools".
 
