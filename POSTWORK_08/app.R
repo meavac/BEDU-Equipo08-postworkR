@@ -246,7 +246,7 @@ ui <-
                                           c(2010:2020)),
                               selectInput("ts.ed.m", "", c(1:12)),
                               selectInput("ts.ed.d", "", c(1:31)),
-                              box(plotlyOutput("tsplot"))
+                              box(plotOutput("tsplot"))
                               
                             )
                     ),
@@ -346,63 +346,63 @@ server <- function(input, output) {
   }) 
   
 # Gráfica de factores de ganancia promedios:
-  output$mom.prom.plot <- renderPlotly({ 
-    pp <- ggplot(mom.prom, aes(x=Num_Ap, y=Capital)) + geom_line( color="purple") + geom_point() +
-      labs(x = "Número de juego",
-           y = "Capital",
-           title = "Escenario con momios promedios") +
-      theme(plot.title = element_text(size=12))  +
-      theme(axis.text.x = element_text(face = "bold", color="blue" , size = 10, angle = 25, hjust = 1),
-            axis.text.y = element_text(face = "bold", color="blue" , size = 10, angle = 25, hjust = 1))
-    
-    ggplotly(pp)
-  })
+  output$tsplot <- renderPlot({
+        
+        ts.data <- mutate(match.data, suma.goles = match.data[, 3] + match.data[, 5],
+                          date = as.Date(date, format = "%Y-%m-%d"))
+        
+        days <- c(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31, 1)
+        monthly.avg <- seq(1, 120)
+        
+        for (i in 1:10) {
+            for (j in 1:12) {
+                match.month <- filter(ts.data, date >= as.Date(paste("201", i-1, "-", j, "-01", sep = "")) &
+                                          date <= as.Date(paste("201", i-1, "-", j, "-", days[j], sep = "")))
+                monthly.avg[days[13]] <- round(mean(match.month$suma.goles), 4)
+                days[13] <- days[13] + 1
+            }
+        }
+        
+        mes.doble <- filter(ts.data, date >= as.Date("2013-05-01") & date <= as.Date("2013-07-01"))
+        monthly.avg[41] <- mean(mes.doble$suma.goles)
+        monthly.avg[42] <- NaN
+        
+        (monthly.avg <- na.omit(monthly.avg))
+        
+        ts.avg <- ts(monthly.avg, start = c(2010, 1), end = c(2019, 5), freq = 10)
+        ts.plot(ts.avg, main = "Serie de tiempo", sub = "Liga española de fútbol",
+                xlab = "Registro en años",
+                ylab = "Promedios mensuales de las sumas de goles")
+                abline(h = mean(monthly.avg), lty = 2, col = "blue", lwd = 2)
+                legend(x = 2010, y = 2.15, legend = "mean", col = "blue", lty = 2, lwd = 1)
+            
+    })
   
-# Serie de tiempo personalizable:
-  output$tsplot <- renderPlotly({
-    ts.data <- match.data
-    ts.data[,"sumagoles"] <- ts.data[,5] + ts.data[,3]
-    
-    ts.data[,"anio"] <- as.numeric(format(ts.data$date, "%Y"))
-    ts.data[,"mes"] <- as.numeric(format(ts.data$date, "%m"))
-    
-    promedios <- ts.data %>% group_by(anio, mes) %>% summarise(prom_gol_pmes = mean(sumagoles), .groups = "drop")
-    promedios <- as.data.frame(promedios)
-    
-    (promedios <- unite(promedios, Fecha, c("anio","mes"), sep="-"))
-    
-    promedios[,2]
-    prom.ts <- ts(promedios$prom_gol_pmes,
-                  start = c(input$ts.st.y,input$ts.st.m,input$ts.st.d),
-                  end = c(input$ts.ed.y,input$ts.ed.m,input$ts.ed.d),
-                  frequency = 12)
-    
-    autoplotly(as.zoo(prom.ts))
-  })
-  
-# Tabla de predicciones, también personalizable:
+# Tabla de predicciones, personalizable:
   output$pred.table <- DT::renderDataTable({
-    anotaciones <- listasoccer$scores
-    equipos <- listasoccer$teams
-    
-    input.date <- as.Date(input$pred.date)
-    
-    imaxd <- fecha[(which(fecha==input.date) - 1)]
-    
-    ranking <- rank.teams(scores=anotaciones, teams=equipos, max.date=imaxd, min.date="2017-08-18")
-    
-    pred <- predict(ranking, date=input.date)
-    
-    pred.df <- data.frame(Fecha=pred$scores$date, Eq.Local=pred$scores$home.team,
-                          Eq.Visita=pred$scores$away.team, Prob.Gana.L=round(pred$scores$home.win,2),
-                          Prob.Gana.V=round(pred$scores$away.win,2), Prob.Empate=round(pred$scores$tie,2),
-                          Punt.L.Pred=round(pred$scores$pred.home.score,2), Punt.V.Pred=round(pred$scores$pred.away.score,2),
-                          Punt.L.Real=pred$scores$home.score, Punt.V.Real=pred$scores$away.score)
-    
-    pred.df <- mutate(pred.df, Resultado.Real=ifelse(Punt.L.Real==Punt.V.Real, "T", ifelse(Punt.L.Real>Punt.V.Real, "H", "A")))
-    
-    DT::datatable(pred.df)
-  })
+
+        anotaciones <- listasoccer$scores
+        equipos <- listasoccer$teams
+        identical(fecha, sort(fecha, decreasing = FALSE))
+        
+        input.date <- as.Date(input$pred.date)
+        
+        imaxd <- fecha[(which(fecha==input.date) - 1)]
+        
+        ranking <- rank.teams(scores=anotaciones, teams=equipos, max.date=imaxd, min.date=fecha[1])
+        
+        pred <- predict(ranking, max.date = input.date, min.date = input.date)
+        
+        pred.df <- data.frame(Fecha=pred$scores$date, Eq.Local=pred$scores$home.team,
+                              Eq.Visita=pred$scores$away.team, Prob.Gana.L=round(pred$scores$home.win,2),
+                              Prob.Gana.V=round(pred$scores$away.win,2), Prob.Empate=round(pred$scores$tie,2),
+                              Punt.L.Pred=round(pred$scores$pred.home.score,2), Punt.V.Pred=round(pred$scores$pred.away.score,2),
+                              Punt.L.Real=pred$scores$home.score, Punt.V.Real=pred$scores$away.score)
+        
+        pred.df <- mutate(pred.df, Resultado.Real=ifelse(Punt.L.Real==Punt.V.Real, "T", ifelse(Punt.L.Real>Punt.V.Real, "H", "A")))
+        
+        DT::datatable(pred.df)
+    })
 }
 
 shinyApp(ui, server)
