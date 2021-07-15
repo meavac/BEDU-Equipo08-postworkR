@@ -238,14 +238,6 @@ ui <-
                     tabItem(tabName = "tseries",
                             fluidRow(
                               titlePanel("Serie de tiempo del promedio de goles mensuales"),
-                              selectInput("ts.st.y", "Selecciona la fecha inicio serie de tiempo - Año, mes, día",
-                                          c(2010:2020)),
-                              selectInput("ts.st.m", "", c(1:12)),
-                              selectInput("ts.st.d", "", c(1:31)),
-                              selectInput("ts.ed.y", "Selecciona la fecha fin serie de tiempo - Año, mes, día",
-                                          c(2010:2020)),
-                              selectInput("ts.ed.m", "", c(1:12)),
-                              selectInput("ts.ed.d", "", c(1:31)),
                               box(plotOutput("tsplot"))
                               
                             )
