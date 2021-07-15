@@ -1,6 +1,5 @@
 # Postwork 8. Dashboards con Shiny - Entorno GUI
 
-- Puede abrir el dashboard publicado en https://8p2kwa-armando0lv.shinyapps.io/postw8/
-- Adicionalmente, están los archivos de app.R, los CSVs y el folder www para correrlo de manera local
-- Implementamos las gráficas de barra, el data table de match games, las gráficas del postwork 3 y las gráficas de factores de ganancia
-- Adicionalmente, incluimos la serie de tiempo que permite al usuario escoger la fecha de fin e inicio así como una tabla de predicciones, que permite al usuario ver las predicciones para los partidos del día que escoga para compararlas con los resultados reales
+- Puedes abrir el dashboard publicado desde https://8p2kwa-armando0lv.shinyapps.io/postw8/.
+- En este repositorio se incluyeron varios archivos (```app.R```, ```.csv``` y un directorio ```www```) para que se ejecute el código de manera local si así se deseara.
+- Adicionalmente, el equipo quizo incluir en el _dashboard_ una serie de tiempo de parámetros ajustables, así como una tabla de predicciones que te permitirá observar las predicciones de los partidos que escojas.
