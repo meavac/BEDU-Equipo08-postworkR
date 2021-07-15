@@ -247,7 +247,7 @@ ui <-
                             fluidRow(        
                               titlePanel("Tabla de predicciones"),
                               selectInput("pred.date", "Selecciona la fecha a predecir",
-                                          fecha),
+                                          rev(fecha)),
                               h5("Se usarán datos de los juegos anteriores a la fecha seleccionada"),
                               box(DT::dataTableOutput("pred.table"))
                             )
