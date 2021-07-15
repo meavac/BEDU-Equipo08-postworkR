@@ -337,6 +337,17 @@ server <- function(input, output) {
     ggplotly(p)
   }) 
   
+   output$mom.prom.plot <- renderPlotly({ 
+    p <- ggplot(mom.prom, aes(x=Num_Ap, y=Capital)) + geom_line( color="purple") + geom_point() +
+      labs(x = "Número de juego",
+           y = "Capital",
+           title = "Escenario con momios promedios") +
+      theme(plot.title = element_text(size=12))  +
+      theme(axis.text.x = element_text(face = "bold", color="blue" , size = 10, angle = 25, hjust = 1),
+            axis.text.y = element_text(face = "bold", color="blue" , size = 10, angle = 25, hjust = 1))
+    ggplotly(p)
+  })
+  
 # Gráfica de factores de ganancia promedios:
   output$tsplot <- renderPlot({
         
