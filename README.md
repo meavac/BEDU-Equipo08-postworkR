@@ -25,6 +25,6 @@ Te darás cuenta de cuánto aprendimos sobre este lenguaje de programación y qu
 - _```POSTWORK 8:``` [Sesión 8. Dashboards con Shiny - Entorno GUI.](https://github.com/meavac/BEDU-Equipo08-postworkR/tree/main/POSTWORK_08)_
 - _```CONTRASTE DE HIPÓTESIS:``` [Prueba de hipótesis propuesta.](https://github.com/meavac/BEDU-Equipo08-postworkR/tree/main/HYPOTHESIS_TESTING)_
 
-## Recursos adicionales
-Visita nuestro Dashboard: [Aquí](https://8p2kwa-armando0lv.shinyapps.io/postw8/)_
-Ve nuestra presentación en vídeo: [Aquí](https://youtu.be/62YZX8vPSxs)_
+## 💻 Recursos adicionales
+- Visita nuestro _[Dashboard]_ [aquí](https://8p2kwa-armando0lv.shinyapps.io/postw8/).
+- Visita nuestra presentación en video [aquí](https://youtu.be/62YZX8vPSxs).
