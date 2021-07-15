@@ -310,7 +310,7 @@ ui <-
                     
                     tabItem(tabName = "momios",
                             fluidRow(
-                                titlePanel(h3(" Gráficas momios máximos y promedios")),
+                                titlePanel(h3("Gráficas factores de ganancia")),
                                 box(plotlyOutput("mom.max.plot")),
                                 box(plotlyOutput("mom.prom.plot"))
                             )
